@@ -13,8 +13,9 @@ import java.util.Map;
 
 public class QueryGenerator {
 
-    private static ProductVO[] getProductList(DataSource dataSource){
+    public static ProductVO[] getProductList(DataSource dataSource){
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+
         List<ProductVO> productList = jdbcTemplate.query("select type from product group by type", new ProductRowMapper() {
 
             @Override
