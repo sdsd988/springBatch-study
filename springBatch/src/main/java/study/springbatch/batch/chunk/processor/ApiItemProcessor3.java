@@ -1,9 +1,11 @@
 package study.springbatch.batch.chunk.processor;
 
 import org.springframework.batch.item.ItemProcessor;
+import org.springframework.stereotype.Component;
 import study.springbatch.batch.domain.ApiRequestVO;
 import study.springbatch.batch.domain.ProductVO;
 
+@Component
 public class ApiItemProcessor3 implements ItemProcessor<ProductVO, ApiRequestVO> {
 
 
